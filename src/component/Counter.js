@@ -6,8 +6,6 @@ function Counter() {
     function handleClick(e) {
         e.stopPropagation();
         setNumber(number => number + 1);
-        setNumber(number => number + 1);
-        setNumber(number => number + 1);
         console.log(number);
     }
 

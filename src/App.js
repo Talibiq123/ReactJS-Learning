@@ -1,9 +1,11 @@
 import "./App.css";
 import PlayButton from "./component/PlayButton";
 import Video from "./component/Video";
-import Counter from "./component/Counter";
-import videoDB from "./data/data";
 import { useState } from "react";
+import videoDB from "./data/data";
+import AddVideo from "./component/AddVideo";
+/*import Counter from "./component/Counter";*/
+
 
 function App() {
 
@@ -11,17 +13,9 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <button onClick={() => {
-          setVideos( [...videos, {  id:videos.length + 1,
-            verified: true,
-            title: "ExpressJS tutorial",
-            views: "830K",
-            time: "7 months ago",
-            channel: "Coder Dost",
-          }]);
-        }}>Add Video</button>       
-      </div>
+
+      <AddVideo addVideos={setVideos}></AddVideo>
+
       {videos.map((video) => (
         <Video
           key={video.id}
@@ -43,7 +37,7 @@ function App() {
       <div style={{ clear: "both" }}>
         {/*<PlayButton message="pause-msg" onClick={() => console.log('pause')}>Pause</PlayButton>*/}
       </div>
-      <Counter></Counter>
+      {/*<Counter></Counter>*/}
     </div>
   );
 }
