@@ -1,39 +1,48 @@
-.dark {
+.dark{
   background-color: gray;
-  color: white;
+  color:white;
 }
 
-.container {
-  width: 15em;
+.container{
+  width:15em;
   margin: 0 0.2em;
   float: left;
   position: relative;
 }
-.pic img {
+.container.darkMode{
+color: white
+}
+.container.lightMode{
+color: black
+
+}
+.pic img{
   width: 100%;
 }
-.title {
+.title{
   font-weight: bold;
   margin-bottom: 1em;
-  color: white;
 }
-.channel,
-.views {
+.darkMode .channel, .darkMode .views{
   font-size: small;
-  color: #ccc;
+  color:#ccc;
+  margin-bottom: 0.2em;
+}
+.lightMode .channel, .lightMode .views{
+  font-size: small;
+  color:black;
   margin-bottom: 0.2em;
 }
 
-.views span {
+.views span{
   padding: 0 0.5em;
 }
 
-.close {
+.close{
   position: absolute;
-  right: 0;
+  right:0;
 }
-
-.edit {
+.edit{
   position: absolute;
-  right: 3em;
+  right:4em;
 }
