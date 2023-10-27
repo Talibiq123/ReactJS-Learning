@@ -1,8 +1,10 @@
+import { useContext } from 'react';
 import './Video.css';
+import VideoDispatchContext from '../context/VideoDispatchContext';
 
-function Video({title,id,channel="Coder Dost",views,time,verified,children,dispatch,editVideo}) {
+function Video({title,id,channel="Coder Dost",views,time,verified,children,editVideo}) {
   console.log('render Video')
-
+  const dispatch = useContext(VideoDispatchContext);
   
   return (
       <>
